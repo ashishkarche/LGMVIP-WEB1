@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+/* Style the form */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4070f4;
+}
+
+
+.container {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  max-width: 500px;
+  box-shadow: 0 0 15px black;
+
+}
+
+.container header {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.container header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #4070f4;
+}
+
+form {
+  background-color: #fff;
+  position: relative;
+  margin-top: 16px;
+  min-height: 490px;
+}
+
+.container form .student {
+  margin-top: 10px;
+}
+
+.container form .title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: #333;
+  
+}
+
+.container form .submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #4070f4;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+form .submitBtn:hover {
+  background-color: #265df2;
+}
+
+.input-group {
+  position: relative;
+  margin: 13px;
+  display: flex;
+}
+
+.input {
+  padding: 10px;
+  background: #fff;
+  border-radius: 2px;
+  outline: none;
+  color: #444444;
+  border: 1px solid #333;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.placeholder {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  font-size: 14px;
+  padding: 0px 5px;
+  color: #333;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input:focus+.placeholder,
+.input:not(:placeholder-shown)+.placeholder {
+  top: -10px;
+  background-color: #fff;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.student .input-group input:focus,
+.student .input-group input:valid{
+  border-color: #9b59b6;
+}
+
+
+/* Style the form inputs */
+input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email], 
+input[type=course] {
+  width: 60%
+}
+
+.btn {
+  border: 2px solid #3e3e3e;
+  color: #3e3e3e;
+  background-color: #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3e3e3e;
+  color: #fff;
+}
+
+form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+}
+form .gender-details .category{
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+.category1{
+  margin: 6px;
+  margin-top: 0;
+  display: flex;
+  gap: 10px;
+}
+.gender-details .category label{
+  display: flex;
+  align-items: center;
+}
+
+.gender-details .category .dot{
+  height: 27px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+  border-color: #d9d9d9;
+  background: #4070f4;
+}
+.Skill-category{
+  display: flex;
+  margin-left: 15%;
+}
+.Skill-category1{
+  margin: 6px;
+  margin-top: 0;
+  display: flex;
+  gap: 10px;
+}
+
+form .Skill-details .Skill-title{
+  font-size: 20px;
+  font-weight: 500;
+}
+form .Skill-details .Skill-category{
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+
+}
+.Skill-details .Skill-category label{
+  display: flex;
+  align-items: center;
+}
+
+.Skill-details .Skill-category .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+}
+#dot-11:checked ~ .Skill-category label .one-one,
+#dot-12:checked ~ .Skill-category label .two-two,
+#dot-13:checked ~ .Skill-category label .three-three{
+  border-color: #d9d9d9;
+  background: #4070f4;
+}
+
+
+/* Style the form output */
+/* .container1 {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  max-width: 500px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+} */
+.output {
+ justify-content: center;
+ text-align: left;
+ display: flex;
+ flex-direction: column;
+}
+
+.div1 {
+  display: flex;
+  font-weight: normal;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+.div1 div {
+  padding: 5px;
+}
+.output h2 {
+  /* margin-left: 230%; */
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px;
+  height:75px;
+  border: 0.5px solid rgb(0, 21, 31);
+  box-shadow: 0 0 15px black;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.output h2::before{
+  content: "";
+  position: absolute;
+  left: 10;
+  bottom: 22px;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #4070f4;
+}
+.d {
+  margin-bottom: 10px;
+  height:210px;
+  border: 0.5px solid rgb(0, 21, 31);
+  box-shadow: 0 0 15px black;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+/* position: relative;
+background-color: #fff;
+width: 100%;
+border-radius: 6px;
+padding: 30px;
+margin: 0 15px;
+max-width: 500px;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+
+.img {
+  width: 150px;
+  max-height: 120px;
+  border-radius: 20px;
+  padding: 5px;
+  padding-right: 10px;
+  align-self: center;
+}
+#img {
+  height: fit-content;
+  background-color: #858585;
+  font-weight: bold;
+}

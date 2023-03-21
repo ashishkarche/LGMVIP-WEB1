@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(69.9deg, rgb(76, 79, 106) 3.2%, rgb(118, 124, 163) 97.6%);
+}
+
+.calculator {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 6px;
+	display: inline-block;
+	margin: 50px auto;
+	padding: 20px;
+	overflow: hidden;
+	z-index: 10;
+	backdrop-filter: blur(15px);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.display {
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.calculator  .value {
+	height: 74px;
+	padding: 10px;
+	background: transparent;
+	color: #fff;
+	user-select: none;
+}
+
+button {
+	color: #fff;
+	background: transparent;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px;
+	transition: 0.5s;
+}
+button:hover {
+	transition: 0s;
+	background: rgba(255, 255, 255, 0.05);
+}
+
+button:active {
+	background: linear-gradient(69.9deg, rgb(76, 79, 106) 3.2%, rgb(118, 124, 163) 97.6%);
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+}
+.operator {
+	font-size: 20px;
+	color: lightcoral;
+}
+
+.equal {
+	
+	color: #f90;
+	grid-column: span 2;
+}
+
+#result {
+	background-color: transparent;
+	border: none;
+	font-size: 30px;
+	outline: none;
+	text-align: right;
+	width: 100%;
+}

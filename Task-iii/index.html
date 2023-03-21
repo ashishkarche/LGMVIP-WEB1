@@ -1,0 +1,87 @@
+<!-- Github Hosted:- https://ashishkarche.github.io/LGMVIP-Web-3/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>Student Enrollment Form</header>
+        <form>
+            <div class="student">
+                <span class="title"><b>Student Details</b></span>
+
+                <div class="input-group">
+                    <input type="text" class="input" id="name" name="name" placeholder=" " required>
+                    <label class="placeholder" for="name">Name:</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" name="course" class="input" placeholder=" " required>
+                    <label class="placeholder" for="course">Course:</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" class="input" id="email" name="email" placeholder=" " required>
+                    <label class="placeholder" for="email">Email:</label>
+                </div>
+                <div class="gender-details">
+                    <span class="gender-title">Gender</span>
+
+                    <div class="category">
+                        <div class="category1">
+                            <input class="dot one" type="radio" name="gender" value="male" id="dot-1">
+                            <label>Male</label>
+                        </div>
+                        <div class="category1">
+                            <input class="dot two" type="radio" name="gender" value="female" id="dot-2">
+                            <label>Female</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="Skill-details">
+                    <span class="Skill-title">Skills</span>
+                    <div class="Skill-category">
+                        <div class="Skill-category1">
+                            <input type="checkbox" name="skills" >
+                            <label>HTML</label>
+                        </div>
+                        <div class="Skill-category1">
+                            <input type="checkbox" name="skills" >
+                            <label>CSS</label>
+                        </div>
+                        <div class="Skill-category1">
+                            <input type="checkbox" name="skills">
+                            <label>JS</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-btn-wrapper">
+                
+                <button class="btn">Choose Image</button>
+                <input type="file" name="image" class="input" id="img" alt="student image" accept="image/*"
+                    onchange="loadFile(event)">
+            </div>
+            <button type="submit" class="submitBtn">
+                <span class="btnSubmit">Enroll Student</span>
+            </button>
+    </div>
+    </form>
+    </div>
+
+    <!-- <div class="container1"> -->
+        <div class="output">
+            <h2>ENROLLED STUDENTS </h2>
+        </div>
+    <!-- </div> -->
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
